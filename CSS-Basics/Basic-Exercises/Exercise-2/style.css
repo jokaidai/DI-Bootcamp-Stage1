@@ -1,4 +1,17 @@
 .odd{
 	background-color: #CA6573;
 	font-family: Verdana, DejaVu Sans, sans-serif;
+
+}
+#n2{
+	color: blue;
+	font-size: 36px;
+}
+.odd.cooler{
+	font-size: 24px;
+}
+#n4{
+	background-color: #9DC462;
+	font-size: 24px;
+	font-weight: bold;
 }
