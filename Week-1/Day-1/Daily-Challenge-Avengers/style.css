@@ -1,8 +1,10 @@
 body{
 	background-image: url("Images/thorBackground.jpg");
-	background-size: cover;
+	background-size: 1536px 800px;
 	background-repeat: no-repeat;
 	font-family: 'THOR Ragnarok', sans-serif;
+	color: #FFDE90;
+	text-shadow: 2px 2px 5px #ACE4F4; 
 }
 i{
 	font-size: 24px;
@@ -22,9 +24,9 @@ li{
 }
 section {
 	text-align: center;
+	word-spacing: 12px;
 	position: relative;
 	top: 350px;
-	color: yellow; 
 }
 h1{
 	text-transform: uppercase;
