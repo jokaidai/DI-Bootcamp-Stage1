@@ -1,0 +1,44 @@
+h1{
+	font-size: 32px;
+}
+p span{
+	font-weight: bold;
+}
+p span:first-child{
+	font-style: italic;
+	font-weight: normal;
+}
+p span:last-child{
+	background-color: yellow;
+	font-weight: normal;
+}
+#catSens span{
+	text-decoration: underline;
+}
+.cats#catSens{
+	margin-left: 58px;
+}
+ol{
+	list-style-type: upper-roman;
+}
+div.cats#media {
+	text-align: center;
+}
+.cats img{
+	width: 600px;
+	height: 350px;
+	margin:50px 50px;
+}
+#lionTable div{
+	border: 1px solid red;
+	margin: 10px;
+	text-align: center;
+	color: red;
+} 
+table, th, td {
+	border: 1px solid black;
+}
+.lions img{
+	width: 600px;
+	height: 350px;
+	margin:100px 170px;
