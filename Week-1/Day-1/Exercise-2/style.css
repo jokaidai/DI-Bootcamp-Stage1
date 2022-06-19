@@ -1,0 +1,25 @@
+nav{
+	position: relative;
+	left: 80px;
+}
+#signIn button{
+	background-color: #3567DA;
+	color: white;
+	border-radius: 5px;
+	border-color: white;
+	padding: 3px 8px;
+	position: relative;
+	text-align: right;
+}
+#srchBar{
+	background-image: url("Images/seaBackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 600px;
+	height: 600px;
+
+}
+h1{
+	color: white;
+	padding: 100px 20px;
+}
