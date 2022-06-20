@@ -1,6 +1,8 @@
 body{
 	font-family: 'THOR Ragnarok', sans-serif;
 	word-spacing: 10px;
+	margin: 0;
+	padding: 0;
 }
 nav{
 	float: left;
@@ -21,11 +23,11 @@ li{
 }
 section{
 	background-image: url("Images/thorBackground.jpg");
-	background-size: cover;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
 	top: 50px;
-	height: 648px;
+	height: 656px;
 }
 div{
 	padding: 50px;
@@ -52,11 +54,8 @@ a:link{
 	text-decoration: none;
 	color: #ACE4F4;
 }
-a:visited{
-	color: #ACE4F4;
-}
-a:hoover{
+a:hover{
 	font-size: 24px;
-	color:#FFFF88 ;
+	color:red ;
 	text-shadow: 2px 2px 5px #ACE4F4;
 }
