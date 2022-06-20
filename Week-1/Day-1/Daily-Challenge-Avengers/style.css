@@ -1,7 +1,4 @@
 body{
-	background-image: url("Images/thorBackground.jpg");
-	background-size: 1536px 800px;
-	background-repeat: no-repeat;
 	font-family: 'THOR Ragnarok', sans-serif;
 	color: #FFDE90;
 	text-shadow: 2px 2px 5px #ACE4F4; 
@@ -15,6 +12,10 @@ ul{
 	position: absolute;
 	right: 0;
 	background-color: black;
+	color: white;
+	padding: 10px;
+	width: 1550px;
+	height: 50px;
 }
 li{
 	display: inline;
@@ -23,6 +24,9 @@ li{
 	color: white;
 }
 section {
+	background-image: url("Images/thorBackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	text-align: center;
 	word-spacing: 12px;
 	position: relative;
@@ -35,4 +39,9 @@ h1{
 footer{
 	position: fixed;
 	bottom: 0;
+	background-color: black;
+	padding: 10px;
+	width: 1550px;
+	height: 50px;
+	text-align: center;
 }
