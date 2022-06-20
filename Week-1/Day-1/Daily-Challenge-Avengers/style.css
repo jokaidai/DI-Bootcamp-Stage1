@@ -1,47 +1,62 @@
 body{
 	font-family: 'THOR Ragnarok', sans-serif;
-	color: #FFDE90;
-	text-shadow: 2px 2px 5px #ACE4F4; 
+	word-spacing: 10px;
 }
-i{
-	font-size: 24px;
-	position: absolute;
-	left: 0;
-}
-ul{
-	position: absolute;
-	right: 0;
+nav{
+	float: left;
+	width: 100%;
 	background-color: black;
 	color: white;
-	padding: 10px;
-	width: 1550px;
-	height: 50px;
+}
+i{
+	float: left;
+}
+ul{
+	float: right;
+	margin-right: 113px;
+	text-transform: uppercase;
 }
 li{
 	display: inline;
-	text-transform: uppercase;
-	padding: 20px;
-	color: white;
 }
-section {
+section{
 	background-image: url("Images/thorBackground.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	text-align: center;
-	word-spacing: 12px;
 	position: relative;
-	top: 350px;
+	top: 50px;
+	height: 648px;
+}
+div{
+	padding: 50px;
+	padding-top: 288px;
+	color:#FFFF88 ;
+	text-shadow: 2px 2px 5px #ACE4F4;
 }
 h1{
-	text-transform: uppercase;
 	font-size: 36px;
 }
+p{
+	font-size: 16px;
+}
 footer{
-	position: fixed;
+	position:fixed;
 	bottom: 0;
-	background-color: black;
-	padding: 10px;
-	width: 1550px;
-	height: 50px;
+	width: 100%;
 	text-align: center;
+	padding: 11px;
+	background-color: black;
+	color: white;
+}
+a:link{
+	text-decoration: none;
+	color: #ACE4F4;
+}
+a:visited{
+	color: #ACE4F4;
+}
+a:hoover{
+	font-size: 24px;
+	color:#FFFF88 ;
+	text-shadow: 2px 2px 5px #ACE4F4;
 }
