@@ -59,3 +59,39 @@ a:hover{
 	color:red ;
 	text-shadow: 2px 2px 5px #ACE4F4;
 }
+@media only screen and (min-width: 768px){
+	h1{
+		font-size: 25px;
+	}
+	nav{
+		background-color: lightgreen;
+		color: black;
+	}
+}
+@media only screen and (min-width: 600px){
+	h1{
+		font-size: 35px;
+		position: relative;
+	}
+	nav{
+		background-color: yellow;
+		color: black;
+	}
+}
+@media  only screen and (min-width: 992px){
+	h1{
+		float: left;
+		margin: 20px;
+	}
+	nav{
+		background-color: red;
+		color: white;
+	}
+
+}
+@media only screen and (min-width: 1200px){
+	nav{
+		background-color: black;
+		color: white;
+	}
+}
