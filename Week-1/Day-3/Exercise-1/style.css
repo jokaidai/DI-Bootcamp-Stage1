@@ -1,4 +1,29 @@
+#wraper{
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+header{
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	padding: 4%;
+}
 #presentation img{
 	width: 20%;
 	height: 20%;
+}
+section{
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	padding: 4%;
+}
+div.myAwesomeness{
+	margin: 4%;
+}
+#moveRight{
+	display: flex;
+	flex-direction: row;
 }
