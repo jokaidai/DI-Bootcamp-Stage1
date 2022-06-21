@@ -1,0 +1,31 @@
+.wraper{
+	display: grid;
+	grid-template-rows: repeat(16, 85px);
+	grid-template-columns: repeat(16, 85px);
+	grid-gap: 10px;
+}
+#orange{
+	background-color: orangered;
+	
+}
+#yellow{
+	background-color: lightsalmon;
+	
+}
+#brown{
+	background-color: brown;
+}
+#lighGrey{
+	background-color: lightgrey;
+	
+}
+#grey{
+	background-color: grey;
+	
+}
+#darkGrey{
+	background-color: darkgrey;
+}
+#black{
+	background-color: black;
+}
