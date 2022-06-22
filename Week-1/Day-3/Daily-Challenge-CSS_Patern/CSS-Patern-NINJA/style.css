@@ -1,8 +1,12 @@
 .wraper{
 	display: grid;
-	grid-template-rows: repeat(16, 85px);
-	grid-template-columns: repeat(16, 85px);
+	grid-template-rows: repeat(16, 1fr);
+	grid-template-columns: repeat(16, 1fr);
 	grid-gap: 10px;
+}
+.wraper div{
+	width: 84px;
+	height: 84px;
 }
 #orange{
 	background-color: orangered;
