@@ -1,0 +1,10 @@
+:root{
+	--main-font:'Aclonica', sans-serif;
+	--secondary-font: 'Rubik Moonrocks', cursive;
+	--green: #84F56C;
+}
+body{
+	margin: auto 0;
+	padding: auto 0;
+	font-family: var(--main-font);
+}
