@@ -192,10 +192,10 @@ console.log(!true);
 // Actual: false
 
 console.log(3 - 4);
-// Prediction:-1
-// Actual:
+// Prediction: -1
+// Actual: -1
 
 console.log("Bob" - "bill");
-// Prediction:NaN
-// Actual:
+// Prediction: NaN
+// Actual: NaN
 //EX6
