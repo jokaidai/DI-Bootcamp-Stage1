@@ -87,7 +87,7 @@ Instructions
 
 let user_verb = prompt("Choose a verb please.");
 let verb_length = user_verb.length;
-let ing  = /ing/;
+let ing  = /.ing/;
 
 if(verb_length < 3){
 	console.log(user_verb);
