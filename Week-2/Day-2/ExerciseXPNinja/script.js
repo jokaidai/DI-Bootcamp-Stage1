@@ -18,3 +18,4 @@ let half_age = age_gap * 2;
 half_age = older + half_age;
 console.log(`The person born in ${younger} will be exactly half the age of the person born in ${older} in ${half_age}.`);
 //EX1
+
