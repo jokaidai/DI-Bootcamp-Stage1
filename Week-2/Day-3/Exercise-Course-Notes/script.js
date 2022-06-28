@@ -32,7 +32,7 @@ if the item is a string, display it.
 
 let names = ["john", "sarah", 23, "Rudolf", 34];
 
-for(let i of names){
+for(let i of names){ 
 
 	if(typeof i !== "string"){
 		continue;
