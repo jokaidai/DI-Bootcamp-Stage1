@@ -19,34 +19,48 @@ Requirement: Don’t copy paste solutions from Google
 */
 
 const numbers = [5,0,9,1,7,4,2,6,3,8];
-const new_numbers = [];
+//const new_numbers = [];
 
 console.log(numbers.toString());
 console.log(numbers.join(" + "));
 
-let highest = 0;
-let last_highest = 0;
+// let highest = 0;
+// let last_highest = 0;
 
-for(let i = 0; i < numbers.length; i++){
-	for(let j of numbers){
+// for(let i = 0; i < numbers.length; i++){
+// 	for(let j of numbers){
 
-		if(highest < j && i == 0){ //console.log("enter only first ieteration");
+// 		if(highest < j && i == 0){ //console.log("enter only first ieteration");
 
-		highest = j;
-		last_highest = highest;
-		
-		}else if(j == last_highest || j > last_highest){ //console.log("are you blocking ?")
+// 		highest = j;
+// 		last_highest = highest;
 
-		continue;
+// 		}else if(j == last_highest || j > last_highest){ //console.log("are you blocking ?")
 
-		}else if(highest < j){ //console.log("i enter several times");	
-		
-		highest = j;
+// 		continue;
+
+// 		}else if(highest < j){ //console.log("i enter several times");	
+
+// 		highest = j;
+// 	}
+// }
+// new_numbers[i] = highest;
+// last_highest = highest;
+// highest = 0;
+// }
+
+// console.log(new_numbers);
+
+
+
+let temp;
+for(i in numbers){
+	for(j in numbers){
+		if(numbers[i] > numbers[j]){
+			temp = numbers[i];
+			numbers[i] = numbers[j];
+			numbers[j] = temp;
+		}
 	}
 }
-new_numbers[i] = highest;
-last_highest = highest;
-highest = 0;
-}
-
-console.log(new_numbers);
+console.log(numbers);
