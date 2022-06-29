@@ -24,6 +24,20 @@ const numbers = [5,0,9,1,7,4,2,6,3,8];
 console.log(numbers.toString());
 console.log(numbers.join(" + "));
 
+let temp;
+for(i in numbers){
+	for(j in numbers){
+		if(numbers[i] > numbers[j]){
+			temp = numbers[i];
+			numbers[i] = numbers[j];
+			numbers[j] = temp;
+		}
+	}
+}
+console.log(numbers);
+
+//BAD SOLUTION
+
 // let highest = 0;
 // let last_highest = 0;
 
@@ -51,16 +65,3 @@ console.log(numbers.join(" + "));
 
 // console.log(new_numbers);
 
-
-
-let temp;
-for(i in numbers){
-	for(j in numbers){
-		if(numbers[i] > numbers[j]){
-			temp = numbers[i];
-			numbers[i] = numbers[j];
-			numbers[j] = temp;
-		}
-	}
-}
-console.log(numbers);
