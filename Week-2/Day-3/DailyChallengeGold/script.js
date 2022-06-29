@@ -25,24 +25,27 @@ console.log(numbers.toString());
 console.log(numbers.join(" + "));
 
 let highest = 0;
-let last_hight = 0;
+let last_highest = 0;
 
-for(i = 0; i < numbers.length; i++){
-	for(j = 0; j < numbers.length; j++){
+for(let i = 0; i < numbers.length; i++){
+	for(let j of numbers){
 
-		if(highest < numbers[j] && i == 0){ //console.log("enter only first ieteration");
-		highest = numbers[j];
-		last_hight = highest;
+		if(highest < j && i == 0){ //console.log("enter only first ieteration");
+
+		highest = j;
+		last_highest = highest;
 		
-		}else if(numbers[j] == last_hight || numbers[j] > last_hight){ //console.log("are you blocking ?")	
+		}else if(j == last_highest || j > last_highest){ //console.log("are you blocking ?")
+
 		continue;
 
-		}else if(highest < numbers[j]){ //console.log("i enter several times");	
-		highest = numbers[j];
+		}else if(highest < j){ //console.log("i enter several times");	
+		
+		highest = j;
 	}
 }
 new_numbers[i] = highest;
-last_hight = highest;
+last_highest = highest;
 highest = 0;
 }
 
