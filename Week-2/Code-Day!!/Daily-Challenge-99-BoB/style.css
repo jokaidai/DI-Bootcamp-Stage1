@@ -1,0 +1,62 @@
+:root{
+	--main-font:'Permanent Marker', cursive ;
+}
+body{
+	background-image: url("img/beerWall-bg.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 100vh;
+	overflow: hidden;
+	background-color: rgba(50, 70, 80, 0.7);
+	background-blend-mode: soft-light;
+
+	color: lightgoldenrodyellow;
+	font-family:var(--main-font);
+	word-spacing: 5px;
+}
+
+header{
+	display: flex;
+	justify-content: center;
+	font-size: 18px;
+}
+
+div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-top: 20%;
+	font-size: 36px;
+}
+
+button{
+	display: inline-block;
+	padding: 15px 25px;
+
+	font-size: 24px;
+	cursor: pointer;
+	font-family:var(--main-font);
+	text-align: center;
+	text-decoration: none;
+
+	outline: none;
+	color: lightgoldenrodyellow;
+	background: none;
+	border: 1px solid lightgoldenrodyellow;
+	border-radius: 15px;
+	box-shadow: 0 5px black;
+}
+
+button:hover {
+	background-color: lightgoldenrodyellow;
+	color:black;
+}
+
+button:active {
+	color: lightgoldenrodyellow;
+	background-color: black;
+	box-shadow: 0 5px lightgoldenrodyellow;
+	transform: translateY(4px);
+}
