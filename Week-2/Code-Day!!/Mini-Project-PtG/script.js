@@ -1,7 +1,5 @@
-// let userNum;
-// let aiNum;  
-
 //---------- Secondary Functions ------------- // 
+
 function getUserNum(){
 
 	let userNum;
