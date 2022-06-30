@@ -8,9 +8,9 @@ function getUserNum(){
 		userNum = Number(userNum);
 
 		if(isNaN(userNum)){
-			alert("Sorry Not a number, choose a real number this time !!")
+			alert("Haha very funny !! it’s not a number, choose a real number this time !!")
 		}else if(userNum < 0 || userNum > 10){
-			alert("Sorry it’s not a good number, choose one between 1 to 10 this time !!")
+			alert("Haha very funny !! it's not a good number, choose one between 0 to 10 this time !!")
 		}
 
 	}
@@ -27,37 +27,38 @@ function getAiNum(){
 
 //---------- Secondary Functions ------------- // 
 
-function playTheGame() {
-	
-	if(confirm("Do you want to play with me ?") == false){
-		alert("No problem, Goodbye");
-	}else{
-		let userNum = getUserNum();
-		let aiNum = getAiNum();
-		compareNumbers(userNum, aiNum);
-	}
-}
 function compareNumbers(userNum, aiNum){
 
 	for(let i = 0; i < 3; i++){
 
 		if(userNum == aiNum){
-			alert("WINNER !!");
+			alert("CHEATER !!! Stop checking the console debbuger to check my variable !!! ");
 			return;
 		}else if (userNum > aiNum ) {
 			if(i == 2){
 				break;
 			}
-			alert("Your number is bigger then mine guess again");
+			alert("YOU LOOSE !! Your number is bigger then mine !! Try again looser.");
 			userNum = getUserNum();
 			
 		}else{
 			if(i == 2){
 				break;
 			}
-			alert("Your number is smaller then mine, guess again");
+			alert("YOU LOOSE !! Your number is smaller then mine !! Try again looser.");
 			userNum = getUserNum();
 		}
 	}
-	alert("Out of chances !!! better luck next time :P");
+	alert("Out of chances :P !!! Wow you are really bad at that game ...");
+}
+
+function playTheGame() {
+	
+	if(confirm("Do you want to be destroyed by me at a guessing game ?") == false){
+		alert("Then why did you click the button !!! idiot ...");
+	}else{
+		let userNum = getUserNum();
+		let aiNum = getAiNum();
+		compareNumbers(userNum, aiNum);
+	}
 }
