@@ -118,4 +118,37 @@ The point of this challenge is to display a list of two books on your browser.
 
         If the book is already read. Set the color of the book’s details to red.
         */
+        let allBooks = [];
+
+        let book1 = {
+            title: "Harry Potter and The deathly hallows",
+            author: "J.K Rowling",
+            image:"https://takweenkw.com/book/51864/single",
+            alreadyRead: true, 
+        }
+        let book2 = {
+            title: "Harry Potter and The Goblet of fire",
+            author: "J.K Rowling",
+            image:"https://crescentbookshop.qa/product/harry-potter-and-the-goblet-of-fire-s4/",
+            alreadyRead: false, 
+        }
+
+        allBooks.push(book1, book2);
+
+        let library = document.createElement("TABLE");
+        library.setAttribute("id", "library");
+        document.body.appendChild(library);
+
+        shelves = document.createElement("TR");
+        shelves.setAttribute("id", "shelves");
+        document.getElementById("library").appendChild(shelves);
+
+        let books = document.createElement("TD");
+        let fBookOnTheShelf  = document.createTextNode(`${book1.title} writen by ${book1.author}`);
+        books.appendChild(fBookOnTheShelf);
+        document.getElementById("shelves").appendChild(books);
+        let sBookOnTheShelf = document.createTextNode(`${book2.title} writen by ${book2.author}`);
+        books.appendChild(sBookOnTheShelf);
+        document.getElementById("shelves").appendChild(books);
+
 //EX4
