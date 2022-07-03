@@ -1,0 +1,89 @@
+<html>
+<head>
+  <title>JavaScript and the Document Object Model</title>
+</head>
+<body>
+  <div id="page">
+    <div id="header">
+      <h1 id="title">Page title</h1>
+    </div>
+    <div id="content">
+      <h2>Content title</h2>
+      <p>Some copy goes here</p>
+      <p>More copy goes here</p>
+    </div>
+  </div>
+
+  <script src="script.js" charset="UTF-8"></script> 
+</body>
+</html>
+
+<!-- Exercise 1: Traversing the DOM
+Knowing how to traverse the DOM using JavaScript provides a foundation
+to altering an HTML page in real time.
+Using the HTML markup in Listing 1, perform these tasks:
+1. Use the firstElementChild / firstChild property to access an element.
+2. Use the lastElementChild / lastChild  property to access an element.
+3. Use the nextElementSibling / nextSibling  property to access an element.
+4. Use the previousElementSibling / previousSibling  property to access an element.
+5. Use the parentNode property to access an element.
+6. Use the childNodes property to access a group of child elements.
+
+
+Exercise 2: Targeting nodes 
+In exercise 1, you learned how to target nodes in several ways.
+Continuing to use the markup in Listing 1, perform the following tasks:
+1. Retrieve the value of a node using nodeValue / innerText / innerHTML.
+2. Change the value of a node using nodeValue / innerText / innerHTML.
+3. Retrieve the value of a node attribute.
+4. Change the value of a node attribute.
+
+Exercise 3: Manipulating the DOM
+Now that you know how to traverse the DOM and alter node values,
+the next logical step is to learn how to add, remove, and replace nodes.
+Perform the following tasks:
+1. Use the appendChild method to add a node.
+2. Use the insertBefore method to add a node.
+3. Use the removeChild method to remove a node.
+4. Use the replaceChild method to replace a node.
+12:17
+DOM
+What is DOM (Document Object Model)
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+Finding HTML elements by id
+Finding HTML elements by tag name
+Finding HTML elements by class name
+Finding HTML elements by selectors
+
+
+Finding HTML Elements
+Method	                                Description
+document.getElementById('root')	        Find an element by element id
+document.getElementsByTagName('div')	  Find elements by tag name
+document.getElementsByClassName('a')	  Find elements by class name
+document.querySelector('#root .a')
+document.querySelectorAll('#root .a')
+
+
+Changing HTML Elements
+Property	Description
+element.innerHTML/innerText =  new html content	Change the inner HTML of an element
+element.attribute = new value	Change the attribute value of an HTML element
+element.style.property = new style	Change the style of an HTML element
+element.setAttribute(attribute, value)	Change the attribute value of an HTML element
+
+
+Adding and Deleting Elements
+Method	Description
+document.createElement(element)	Create an HTML element
+document.removeChild(element)	Remove an HTML element
+document.appendChild(element)	Add an HTML element
+document.replaceChild(new, old)	Replace an HTML element -->
