@@ -13,51 +13,51 @@ Instructions:
     -Add the classes university and attendance to the first <ul>.
     */
 
-   //  console.log(document.getElementById("container"));
-   //  document.querySelector(".list").children[1].textContent = "Richard";
+    console.log(document.getElementById("container"));
+    document.querySelector(".list").children[1].textContent = "Richard";
 
-   //  let liList = document.getElementsByTagName("ul");
-   //  for(let i = 0; i < liList.length; i++){
-   //     liList[i].firstElementChild.textContent = "Elie";
-   //     liList[i].classList.add("student_list");
-   // }
-   // liList[0].classList.add("university");
-   // liList[0].classList.add("attendance");
+    let liList = document.getElementsByTagName("ul");
+    for(let i = 0; i < liList.length; i++){
+       liList[i].firstElementChild.textContent = "Elie";
+       liList[i].classList.add("student_list");
+   }
+   liList[0].classList.add("university");
+   liList[0].classList.add("attendance");
 
-   // let list2 = document.getElementsByClassName("list")[1];
-   // list2.removeChild(list2.children[1]);
-//EX1
+   let list2 = document.getElementsByClassName("list")[1];
+   list2.removeChild(list2.children[1]);
+// //EX1
 
-//EX2
-/*
-Instructions:
+// //EX2
 
-1.Add a “light blue” background color and some padding to the <div>.
+// Instructions:
 
-2.Do not display the <li> that contains the text node “John”.
+// 1.Add a “light blue” background color and some padding to the <div>.
 
-3.Add a border to the <li> that contains the text node “Pete”.
+// 2.Do not display the <li> that contains the text node “John”.
 
-4.Change the font size of the whole body.
+// 3.Add a border to the <li> that contains the text node “Pete”.
 
-5.Bonus: If the background color of the div is “light blue”, alert “Hello x and y” (x and y are the users in the div).
-*/
+// 4.Change the font size of the whole body.
 
-// let users = document.getElementsByTagName("div")[1];
-// console.log(users);
-// users.style.backgroundColor = "lightBlue";
-// users.style.padding = "5px";
+// 5.Bonus: If the background color of the div is “light blue”, alert “Hello x and y” (x and y are the users in the div).
 
-// liList[2].firstElementChild.style.display = "none"; //liList is a var from the first exercise that stock all the ul.
-// liList[2].firstElementChild.nextElementSibling.style.border = "solid black 1px";
 
-// document.body.style.fontSize = "36px";
+let users = document.getElementsByTagName("div")[1];
+console.log(users);
+users.style.backgroundColor = "lightBlue";
+users.style.padding = "5px";
 
-// for(let i = 0; i < liList.length; i++){
+liList[2].firstElementChild.style.display = "none"; //liList is a var from the first exercise that stock all the ul.
+liList[2].firstElementChild.nextElementSibling.style.border = "solid black 1px";
 
-//  if(liList[i].previousElementSibling.style.backgroundColor == "lightBlue")
-//     alert(`Hello ${liList[i]} and ${liList[i].nextElementSibling}`);
-// }
+document.body.style.fontSize = "36px";
+
+for(let i = 0; i < liList.length; i++){
+
+   if(liList[i].previousElementSibling.style.backgroundColor == "lightBlue")
+    alert(`Hello ${liList[i]} and ${liList[i].nextElementSibling}`);
+}
 //EX2
 
 //EX3
@@ -76,16 +76,16 @@ Instructions:
     Use the firstElementChild and the lastElementChild properties to retrieve the first and last <li> elements from their parent element (<ul>). Display the text of each link. (Hint: use the textContent property).
     */
 
-    // let ulList = document.querySelector("div ul");
-    // ulList.parentElement.setAttribute("id", "socialNetworkNavigation");
+    let ulList = document.querySelector("div ul");
+    ulList.parentElement.setAttribute("id", "socialNetworkNavigation");
 
-    // let newLi = document.createElement("li");
-    // let textNode = document.createTextNode("Logout");
-    // newLi.appendChild(textNode);
-    // ulList.appendChild(newLi);
+    let newLi = document.createElement("li");
+    let textNode = document.createTextNode("Logout");
+    newLi.appendChild(textNode);
+    ulList.appendChild(newLi);
 
-    // console.log(ulList.firstChild.nextElementSibling.textContent);
-    // console.log(ulList.lastChild.textContent);
+    console.log(ulList.firstChild.nextElementSibling.textContent);
+    console.log(ulList.lastChild.textContent);
 //EX3
 
 //EX4
