@@ -1,8 +1,11 @@
 //---------- Secondary Functions ------------- // 
 
+let userNum;
+let aiNum;
+
 function getUserNum(){
 
-	let userNum;
+	
 	do{
 		userNum = prompt("Please choose a number between 0 and 10")
 		userNum = Number(userNum);
@@ -16,15 +19,14 @@ function getUserNum(){
 	}
 	while(userNum < 0 || userNum > 10 || isNaN(userNum));
 
-	return userNum;
+	aiNum = Math.floor((Math.random() * 10) + 1);
+	
 }
 
-function getAiNum(){
+//function getAiNum(){
 
-	let aiNum = Math.floor((Math.random() * 10) + 1);
-	return aiNum;
-}
-
+	
+//
 //---------- Secondary Functions ------------- // 
 
 function compareNumbers(userNum, aiNum){
@@ -57,7 +59,7 @@ function playTheGame() {
 	if(confirm("Do you want to be destroyed by me at a guessing game ?") == false){
 		alert("Then why did you click the button !!! idiot ...");
 	}else{
-		let userNum = getUserNum();
+		getUserNum();
 		let aiNum = getAiNum();
 		compareNumbers(userNum, aiNum);
 	}
