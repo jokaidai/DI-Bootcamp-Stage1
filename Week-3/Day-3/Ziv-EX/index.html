@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Drag & Drop Demo</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <p class="title"> Drag the
+        <span class="pink">Pink</span>
+        Square to the
+        <span class="orange">Orange</span>
+        Square &
+        <span class="pink-border">Back</span>
+    </p>
+
+    <div class="squares-container">
+        <!-- ondragover ondrop -->
+        <div class="draggable-container">
+          <!-- ondragstart ondragend -->
+          <div id="draggable-element"></div>
+        </div>
+
+        <!-- ondragover ondrop -->
+        <div id="drop-container"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
