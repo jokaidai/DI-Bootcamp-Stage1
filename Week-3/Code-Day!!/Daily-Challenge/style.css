@@ -7,3 +7,10 @@ section{
 h1{
 	text-transform: uppercase;
 }
+
+button{
+	text-transform: uppercase;
+}
+i{
+	margin: 5px;
+}

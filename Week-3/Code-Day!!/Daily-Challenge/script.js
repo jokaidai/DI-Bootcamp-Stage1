@@ -1,5 +1,5 @@
 /*
-Instructions:
+Instructions:<i class="fa-solid fa-xmark"></i>
 
 1.Create an HTML, CSS and a JS file.
 
@@ -33,3 +33,36 @@ BONUS II (not mandatory):
 */
 
 let listTasks = [];
+let input = document.querySelector("input");
+let btn = document.querySelector("button");
+let taskList = document.querySelector(".listTasks");
+
+
+function addTask(){ //<i class="fa-solid fa-xmark"></i>
+if(input.value !== ""){
+	listTasks.push(input.value);
+}
+}
+btn.addEventListener("click", function(event){
+	event.preventDefault();
+	addTask();
+	addDiv();
+});
+
+let added = 0;
+function addDiv(){
+	let newDiv = document.createElement("div");
+	let newTask = document.createTextNode(listTasks[added]);
+	let xIcon = getIcon();
+	newDiv.appendChild(xIcon);
+	newDiv.appendChild(newTask);
+	taskList.appendChild(newDiv);
+	added ++	
+}
+
+function getIcon(){
+	let newI = document.createElement("i");
+	newI.classList.add("fa-solid");
+	newI.classList.add("fa-xmark");
+	return newI;
+}
