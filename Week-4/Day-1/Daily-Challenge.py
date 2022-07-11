@@ -31,8 +31,8 @@ print(user_string[-1])
 
 builder = " "
 for character in range (string_size):
-        builder += user_string[character]
-        print(builder)
+    builder += user_string[character]
+    print(builder)
 
 import random
 char_list = list(user_string)
