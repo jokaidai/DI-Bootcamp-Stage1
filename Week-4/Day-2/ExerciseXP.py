@@ -97,7 +97,7 @@ for counter in range(0, 21):
 
 for idx, num in enumerate(range(1, 21)):
     if(idx % 2 == 0):
-        print(num) 
+        print(f"{num} have an even index:{idx}") 
 #EX5
 
 #EX6
@@ -153,5 +153,103 @@ while active:
         price += 2.5
         topping_added += topping + " "
 
+if topping_added == "":
+    topping_added = "nothing"
+
 print(f"you added {topping_added} to you Pizza the final check is {price}$")
 #EX8
+
+#EX9
+# Instructions
+
+# A movie theater charges different ticket prices depending on a person’s age.
+# if a person is under the age of 3, the ticket is free.
+# if they are between 3 and 12, the ticket is $10.
+# if they are over the age of 12, the ticket is $15.
+# Ask a family the age of each person who wants a ticket.
+# Store the total cost of all the family’s tickets and print it out.
+
+# A group of teenagers are coming to your movie theater and want to watch a movie that is restricted for people between the ages of 16 and 21.
+# Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
+# At the end, print the final list.
+
+family_size = int(input("How many tickets do you want ? "))
+price = 0
+while True: 
+    
+    if family_size == 0:
+        break
+    else:
+       famMember_age =  int(input("How old are you ?"))
+
+    if famMember_age < 3:
+        print("next ")
+        family_size -= 1 
+
+    elif  3 <= famMember_age <= 12:
+        price += 10 
+        print("next ")
+        family_size -= 1 
+
+    elif famMember_age > 12:
+        price += 15 
+        print("next ")
+        family_size -= 1 
+
+print(f"{price}$ please :) ")
+
+teen_names = input("What are your names ? ")
+teen_list = teen_names.split()
+# group_size = len(teen_list)
+print(teen_list)
+
+for idx, teen in enumerate(teen_list):
+    
+    teen_age = int(input(f"{teen} How old are you ?"))
+    if 16 < teen_age < 21:
+        del teen_list[idx]
+        print("Sorry you are not permited to watch this movie :( ")
+    else:
+        print("Enjoy !! :)")    
+print(teen_list)
+#EX9
+#EX10
+# Instructions
+
+# Use the above list called sandwich_orders.
+# Make an empty list called finished_sandwiches.
+# As each sandwich is made, move it to the list of finished sandwiches.
+# After all the sandwiches have been made, print a message listing each sandwich that was made , such as I made your tuna sandwich.
+
+sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Egg sandwich", "Sabih sandwich", "Pastrami sandwich"]
+finished_sandwiches = []
+
+for sandwich in sandwich_orders:
+    finished_sandwiches.append(sandwich)
+
+for sandwich in finished_sandwiches:
+    print(f"I made your {sandwich} !!")
+#EX10
+
+#EX11
+# Instructions
+
+# Using the list sandwich_orders from the previous exercise, make sure the sandwich ‘pastrami’ appears in the list at least three times.
+# Add code near the beginning of your program to print a message saying the deli has run out of pastrami, and then use a while loop to remove all occurrences of ‘pastrami’ from sandwich_orders.
+# Make sure no pastrami sandwiches end up in finished_sandwiches.
+
+print ("sorry but the deli run out of pastrami :(")
+
+unwanted_sandwich ="Pastrami sandwich"
+for sandwich in sandwich_orders:
+    finished_sandwiches.append(sandwich)
+    if(sandwich == unwanted_sandwich ):
+        finished_sandwiches.append(sandwich)
+        finished_sandwiches.append(sandwich)
+
+while unwanted_sandwich in finished_sandwiches:
+    finished_sandwiches.remove(unwanted_sandwich)
+
+for sandwich in finished_sandwiches:
+    print(f"I made your {sandwich} !!")
+#EX11
