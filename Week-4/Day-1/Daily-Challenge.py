@@ -27,7 +27,7 @@ elif string_size > 10:
     print("Its too long try again please")
 
 print(user_string[0])
-print(user_string[9])
+print(user_string[-1])
 
 builder = user_string[0]
 for character in range (string_size):
