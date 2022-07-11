@@ -29,12 +29,10 @@ elif string_size > 10:
 print(user_string[0])
 print(user_string[-1])
 
-builder = user_string[0]
+builder = " "
 for character in range (string_size):
-    
-     print(builder)
-     if character > 0:
         builder += user_string[character]
+        print(builder)
 
 import random
 char_list = list(user_string)
