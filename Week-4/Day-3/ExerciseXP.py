@@ -7,12 +7,11 @@
 # Expected output:
 # {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
 
-# keys = ['Ten', 'Twenty', 'Thirty']
-# values = [10, 20, 30]
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
 
-# dict_from_list = dict(zip(keys, values))
-# print(dict_from_list)
-
+dict_from_list = dict(zip(keys, values))
+print(dict_from_list)
 #EX1
 
 #EX2
@@ -29,61 +28,61 @@
 
 # Bonus: Ask the user to input the names and ages instead of using the provided family variable (Hint: ask the user for names and ages and add them into a family dictionary that is initially empty).
 
-# print("-----regular-----")
+print("-----regular-----")
 
-# price = 0 
-# family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
+price = 0 
+family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
 
-# for name, age in family.items():
+for name, age in family.items():
 
-#     if age < 3:
-#         print("its free for you sweety :)")
-#         print("next !")
+    if age < 3:
+        print("its free for you sweety :)")
+        print("next !")
 
-#     elif 3 <= age <= 12:
-#         print("10$ please :)")
-#         price += 10
-#         print("next !")
+    elif 3 <= age <= 12:
+        print("10$ please :)")
+        price += 10
+        print("next !")
 
-#     else:
-#         print("15$ please :)")
-#         price += 15
-#         print("next !")
+    else:
+        print("15$ please :)")
+        price += 15
+        print("next !")
 
-# print(f"Your final check is {price}$ !!! Enjoy !!! :)")
+print(f"Your final check is {price}$ !!! Enjoy !!! :)")
 
-# print("-----bonus-----")
+print("-----bonus-----")
 
-# names = []
-# ages = []
-# price = 0
-# while True:
-#     want_to_buy = input ("do you want to buy ticket ?")
-#     if want_to_buy == "no":
-#         break
-#     names.append(input("name please ?"))
-#     ages.append(int(input("age please ?")))
-#     print("next")
+names = []
+ages = []
+price = 0
+while True:
+    want_to_buy = input ("do you want to buy ticket ?")
+    if want_to_buy == "no":
+        break
+    names.append(input("name please ?"))
+    ages.append(int(input("age please ?")))
+    print("next")
 
-# generated_family = dict(zip(names, ages))
+generated_family = dict(zip(names, ages))
 
-# for name, age in generated_family.items():
+for name, age in generated_family.items():
 
-#     if age < 3:
-#         print("its free for you sweety :)")
-#         print("next !")
+    if age < 3:
+        print("its free for you sweety :)")
+        print("next !")
 
-#     elif 3 <= age <= 12:
-#         print("10$ please :)")
-#         price += 10
-#         print("next !")
+    elif 3 <= age <= 12:
+        print("10$ please :)")
+        price += 10
+        print("next !")
 
-#     else:
-#         print("15$ please :)")
-#         price += 15
-#         print("next !")
+    else:
+        print("15$ please :)")
+        price += 15
+        print("next !")
 
-# print(f"Your final check is {price}$ !!! Enjoy !!! :)")
+print(f"Your final check is {price}$ !!! Enjoy !!! :)")
 #EX2
 
 #EX3
@@ -105,50 +104,51 @@
 # 13. Use a method to add the information from the dictionary more_on_zara to the dictionary brand.
 # 14. Print the value of the key number_stores. What just happened ? answer : the num of store was updated from 7000 to 10000
 
-# brand = {
-#     "name": "Zara", 
-#     "creation_date": 1975, 
-#     "creator_name": "Amancio Ortega Gaona", 
-#     "type_of_clothes": ["men", "women", "children", "home"], 
-#     "international_competitors": ["Gap", "H&M", "Benetton"], 
-#     "number_stores": 7000,
-#     "major_color": {
-#         "France": "blue", 
-#         "Spain": "red", 
-#         "US":["pink", "green"]
-#     }
-# }
-# brand["number_stores"] = 2
+brand = {
+    "name": "Zara", 
+    "creation_date": 1975, 
+    "creator_name": "Amancio Ortega Gaona", 
+    "type_of_clothes": ["men", "women", "children", "home"], 
+    "international_competitors": ["Gap", "H&M", "Benetton"], 
+    "number_stores": 7000,
+    "major_color": {
+        "France": "blue", 
+        "Spain": "red", 
+        "US":["pink", "green"]
+    }
+}
+brand["number_stores"] = 2
 
-# print("We have clothe for", end = " ")
-# for client in brand["type_of_clothes"]:
-#     print(client, end = " ")
-# print(f"!!! just come check any {brand["name"]} near your home !!")
+print("We have clothe for", end = " ")
+for client in brand["type_of_clothes"]:
+    print(client, end = " ")
+brand_name = brand["name"]
+print(f"!!! just come check any {brand_name} near your home !!")
 
-# brand["country_creation"] = "spain"
+brand["country_creation"] = "spain"
 
-# key_present = "international_competitors"
-# if key_present in brand.keys():
-#     brand["international_competitors"].append("Desigual")
+key_present = "international_competitors"
+if key_present in brand.keys():
+    brand["international_competitors"].append("Desigual")
 
-# del brand["creation_date"]
+del brand["creation_date"]
 
-# print(brand["international_competitors"][-1])
+print(brand["international_competitors"][-1])
 
-# print(brand["major_color"]["US"])
+print(brand["major_color"]["US"])
 
-# print(len(brand))
+print(len(brand))
 
-# print(brand.keys())
+print(brand.keys())
 
-# more_on_zara = {
-#     "creation_date": 1975, 
-#     "number_stores": 10000
-# }
+more_on_zara = {
+    "creation_date": 1975, 
+    "number_stores": 10000
+}
 
-# brand.update(more_on_zara)
+brand.update(more_on_zara)
 
-# print(brand["number_stores"])
+print(brand["number_stores"])
 #EX3
 
 #EX4
