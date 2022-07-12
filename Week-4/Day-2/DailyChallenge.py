@@ -38,7 +38,8 @@ print(f"number: {user_num} - length {user_len} ==> {mutiply_table}")
 user_input = input("Write something with duplicate ")
 list_from_input = list(user_input)
 list_from_input = list(dict.fromkeys(list_from_input))
-back_to_string = str(list_from_input)
+back_to_string = "".join(list_from_input)
+
 print(f"users's word : {user_input} ==> {back_to_string}")
 
 #CHALLENGE 2
