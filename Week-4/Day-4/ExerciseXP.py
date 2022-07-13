@@ -170,5 +170,61 @@ show_magicians(magician_names)
 # Bonus: Give the temperature as a floating-point number instead of an integer.
 # Bonus: Instead of asking for the season, ask the user for the number of the month (1 = January, 12 = December). Determine the season according to the month.
 
-print("-----EX6-----")
+print("-----EX7-----")
 
+def get_random_temp(season:str) -> int :
+    """this function return a random num according to the season var"""
+
+    if season == "winter" :
+        celsius = random.randint(-10, 16)
+        return celsius 
+    
+    elif season == "spring" :
+        celsius = random.randint(21, 32)
+        return celsius
+    
+    elif season == "summer" :
+        celsius = random.randint(32, 40)
+        return celsius
+    
+    elif season == "autumn" :
+        celsius = random.randint(16, 21)
+        return celsius
+
+def main() -> None:
+    """main fuction for the moment print a message using get_random_temp funct"""
+
+    month = 0
+    while not (1 <= month <= 12):
+       
+        month = int(input("What is the number of the month ??"))
+
+        if  3 <= month <= 5:
+            season = "spring"
+    
+        elif  6 <= month <= 8:
+            season = "summer"
+    
+        elif  9 <= month <= 11:
+            season = "autumn"
+    
+        else:
+            season = " winter"
+
+    celsius = get_random_temp(season)
+    if celsius <= 0:
+        print(f"The temperature right now is {celsius} degrees Celsius.Brrr, that's freezing! Wear some extra layers today")
+   
+    elif 0 < celsius <= 16:
+        print(f"The temperature right now is {celsius} degrees Celsius.Brrr, Quite chilly! Don't forget your coat")
+    
+    elif 16 < celsius <= 23:
+        print(f"The temperature right now is {celsius} degrees Celsius.A bit windy but you should get some sun !!")
+    
+    elif 23 < celsius <= 32:
+        print(f"The temperature right now is {celsius} degrees Celsius.No clouds in the sky !!! Enjoy")
+    
+    elif 32 < celsius <= 40:
+        print(f"The temperature right now is {celsius} degrees Celsius.It's hell 's heat out here !!!! stay near an A.C !! friend advice ;)")
+
+main()
