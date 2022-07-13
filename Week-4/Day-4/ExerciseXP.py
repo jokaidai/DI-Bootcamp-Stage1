@@ -172,7 +172,7 @@ show_magicians(magician_names)
 
 print("-----EX7-----")
 
-def get_random_temp(season:str) -> int :
+def get_random_temp(season: str) -> int :
     """this function return a random num according to the season var"""
 
     if season == "winter" :
@@ -191,8 +191,8 @@ def get_random_temp(season:str) -> int :
         celsius = random.randint(16, 21)
         return celsius
 
-def main() -> None:
-    """main fuction for the moment print a message using get_random_temp funct"""
+def get_month() -> str:
+    """utility function to get the month for the user""" 
 
     month = 0
     while not (1 <= month <= 12):
@@ -209,7 +209,14 @@ def main() -> None:
             season = "autumn"
     
         else:
-            season = " winter"
+            season = "winter"
+    
+    return season
+
+def main() -> None:
+    """main fuction for the moment print a message using get_random_temp funct"""
+
+    season = get_month()
 
     celsius = get_random_temp(season)
     if celsius <= 0:
