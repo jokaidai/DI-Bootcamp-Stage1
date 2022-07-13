@@ -31,7 +31,7 @@ matrix = [
 
 regex = "[a-zA-Z]+"
 col_list = []
-for row in range(0, 3):
+for row in range(0, len(matrix[0])):
     for col, char  in enumerate(matrix):
         col_list.append(matrix[col][row])
 
