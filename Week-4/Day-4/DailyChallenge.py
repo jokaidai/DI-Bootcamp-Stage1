@@ -17,8 +17,6 @@ from typing import final
 #     #t%
 #     ^r!
 
-regex = "[a-zA-Z]+"
-
 matrix = [ 
 
     ["7", "i", "3"], 
@@ -31,7 +29,7 @@ matrix = [
     ["^", "r", "!"]  
 ]
 
-
+regex = "[a-zA-Z]+"
 col_list = []
 for row in range(0, 3):
     for col, char  in enumerate(matrix):
@@ -39,5 +37,5 @@ for row in range(0, 3):
 
 str_matrix = "".join(col_list)
 clean_matrix = re.findall(regex, str_matrix)
-final_matrix =" ".join(clean_matrix) 
+final_matrix = " ".join(clean_matrix) 
 print(final_matrix)
