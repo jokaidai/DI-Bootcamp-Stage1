@@ -1,19 +1,20 @@
-from pickle import TRUE
-from xmlrpc.client import boolean
+import random
 
-
+# global variable
 board = [
     [" ", " ", " "],
     [" ", " ", " "],
     [" ", " ", " "]
 ]
 
+player = "start"
+# global variable
+
 def display_board() -> None:
     """a function to display the board in the screen"""
 
     content = 0
     row = 0
-    print("\n")
 
     print ("TIC-TAC-TOE")
     for i in range(0, 7):
@@ -28,10 +29,32 @@ def display_board() -> None:
         elif i % 2 == 0:
             print("* ----|---|---- *")
 
-    print("\n")
+
+def choose_player() -> str: 
+    """function to choose who's gonna start the X or the O and then change the player each turn accordingly"""
+
+    if player == "start": # only during first call
+        
+        print("To choose who is starting let's flip a coin ...\n")
+        coin = random.randint(1, 2) 
+
+        if coin == 1:
+            print("Player X is starting, good luck !!!\n")
+            return "X"
+        else:
+            print("Player O is starting, good luck !!!\n")
+            return "O"
+
+    elif player == "X":
+        print("player O turn ...\n")
+        return "O"
+    
+    elif player == "O":
+        print("player X turn ...\n")
+        return "X"
 
 
-def player_input(player: str) -> None :
+def player_input(player: str) -> None : 
     """a function to ge the input from the player and draw it on the board"""
 
     row = int(input("enter row: ")) - 1
@@ -46,7 +69,7 @@ def player_input(player: str) -> None :
     print("\n")
 
 
-def check_win_row(row: int) -> bool:
+def check_win_row(row: int) -> bool: #-------------this function is called only in the check_win function
     """fucntion to check if someone won by the horizontal"""
 
     next_case = 0
@@ -54,7 +77,7 @@ def check_win_row(row: int) -> bool:
         return True
 
 
-def check_win_col(col: int) -> bool:
+def check_win_col(col: int) -> bool: #-------------this function is called only in the check_win function
     """fucntion to check if someone won by the vertical"""
     
     next_case = 0
@@ -62,7 +85,7 @@ def check_win_col(col: int) -> bool:
         return True
 
 
-def check_win_diag() -> bool:
+def check_win_diag() -> bool: #-------------this function is called only in the check_win function
     """fucntion to check if someone won by the diagonal"""
     
     diag = 0
@@ -86,15 +109,24 @@ def check_win() -> bool:
         return True
 
     return False
+
+
+def play() -> None:
+    """main function that handle the entire game session"""
+
+    global player # we want to change the value of the global player variable not the local so it remenber wich player is actually playing 
+
+    print("\nWelcome to TIC-TAC-TOE !!!\n")
+    display_board()
+    player = choose_player()
+ 
+    
     
 
-display_board()
-player_input("X")
-print(check_win())
-display_board()
-player_input("X")
-print(check_win())
-display_board()
-player_input("X")
-print(check_win())
-display_board()
+    player_input(player)
+    display_board()
+    player = choose_player()
+    player_input(player)
+    display_board()
+
+play()
