@@ -1,3 +1,4 @@
+from pickle import TRUE
 from xmlrpc.client import boolean
 
 
@@ -60,14 +61,29 @@ def check_win_col(col: int) -> bool:
     if board[next_case][col] == board[next_case + 1][col] == board[next_case + 2][col] and board[next_case][col] != " ":
         return True
 
+
+def check_win_diag() -> bool:
+    """fucntion to check if someone won by the diagonal"""
+    
+    diag = 0
+    if board[diag][diag] == board[diag + 1][diag + 1] == board[diag + 2][diag + 2] and board[diag + 1][diag + 1] != " ":
+        return True
+
+    elif board[diag][diag + 2] == board[diag + 1][diag + 1] == board[diag + 2][diag] and board[diag + 1][diag + 1] != " ":
+        return True
+
+
 def check_win() -> bool:
     """fucntion that will check each turn if there is a winner """
-    
+
     for row in range(0, 3):
         if check_win_row(row):
             return True 
         elif check_win_col(row):
             return True
+
+    if(check_win_diag()):
+        return True
 
     return False
     
