@@ -1,48 +1,3 @@
-# class CharacterAttributes:
-#     """a class to store the available attribute of a character"""
-#     def __init__(self, strength:int, intelligence:int, dexterity:int):
-
-#         self.strength = strength
-#         self.intelligence = intelligence
-#         self.dexterity = dexterity
-     
-
-# class Characters:
-#     """class creating and storing the charaters od the game """
-
-#     char_created = 0
-
-#     def __init__(self:object, name:str, race:str, gender:str, attributes = (0,0,0)) -> object:
-#         self.name = name
-#         self.race = race
-#         self.gender = gender
-#         self.attributes = CharacterAttributes(*attributes)
-       
-#         Characters.char_created += 1
-
-#     def displayChar(self:object)-> None:
-#         """a small function that display the character and is attribute """
-
-#         print(f"char name: {self.name}, char race: {self.race}, char strength: {self.attributes.strength}, char intelligence: {self.attributes.intelligence}, char dexterity: {self.attributes.dexterity}")
-    
-#     def strike (self:object) -> None:
-#         """a function that hold the calculation of base damage """
-
-#         dammage = self.attributes.strength + self.attributes.dexterity - self.attributes.intelligence
-
-#         if self.gender == "Male":
-#             print(f"{self.name} strikes !!! he makes {dammage} damage")
-#         else:
-#             print(f"{self.name} strikes !!! she makes {dammage} damage")            
-
-# thrall = Characters("Thrall", "Orc", "Male", attributes = (200, 100, 150))
-# jaina = Characters("Jaina", "Human", "Female", attributes = (50, 250, 100))
-
-# thrall.displayChar()
-# jaina.displayChar()
-# thrall.strike()
-# jaina.strike()
-
 #EX1
 #INSTRUCTIONS:
 
@@ -188,13 +143,16 @@ class Zoo:
 
     def __init__(self, zoo_name:str, animals:list) -> object:
         self.zoo_name = zoo_name
-        animals = animals
+        self.animals = animals
     
     def add_animal(self:object, new_animal:str) -> None:
         """a method that check if an animal is present in the zoo and add it if he is not """
 
         if new_animal not in self.animals:
             self.animals.append(new_animal)
+        
+        else:
+            print(f"We already have those in {self.zoo_name} but thanks")
     
     def get_animals(self:object) -> None:
         """a method that display all the animal present in the zoo"""
@@ -207,6 +165,8 @@ class Zoo:
 
         if sold_animal in self.animals:
            self.animals.remove(sold_animal)
+        else:
+            print("Sorry we don't have this animal you are looking for ... ")
 
     def sort_animals(self:object) -> dict:
         """this method sort alphabeticaly the animals of the list and group them by first letter of the name inside a dictionary ..."""
@@ -216,20 +176,26 @@ class Zoo:
 
         for animal in sorted_animals:
              if animal[0] not in grouped_animals:
-                grouped_animals[animal[0]] = [animal[0]]
+                grouped_animals[animal[0]] = [animal]
         
-        else:
-            grouped_animals[animal[0]].append(animal)
+             else:
+                grouped_animals[animal[0]].append(animal)
         
         return grouped_animals
 
     def get_groups(self:object) -> None:
         """this method print the animal in the zoo sorted by alphabetical group"""
 
-        to_print = self.sort_animals
+        to_print = self.sort_animals()
 
         print(to_print)
 
-ramat_gan_safari = Zoo("Ramat Gan Safari", ["Wolfs", "Gorilla", "Giraffe", "Monkeys", "Alpaccas", "Aligators", "Snakes"])
+ramat_gan_safari = Zoo("Ramat Gan Safari", ["Wolfs", "Gorillas", "Giraffes", "Monkeys", "Alpaccas", "Aligators", "Snakes"])
 
 ramat_gan_safari.get_animals()
+print("---------")
+ramat_gan_safari.add_animal("Lions")
+ramat_gan_safari.sell_animal("Wolfs")
+ramat_gan_safari.get_animals()
+print("---------")
+ramat_gan_safari.get_groups()
