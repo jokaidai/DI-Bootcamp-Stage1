@@ -1,4 +1,5 @@
 import math
+import random
 
 # Exercise 1 : Geometry
 # Instructions:
@@ -45,3 +46,45 @@ class Circle:
 # 2 - Add a method that returns the reversed list.
 # 3 - Add a method that returns the sorted list.
 #   Bonus : Create a method that generates a second list with the same length as mylist. The list should be constructed with random numbers. (use list comprehension).
+
+class MyList ():
+    """a class that creates holding list 's object and allow some action on them """
+
+    def __init__(self:object, letter_list:list) -> object:
+        
+        self.letter_list = letter_list
+
+    
+    def reverse_it(self:object) -> None:
+        """this method reverse the list hold by the object and return it"""
+
+        reverted_list = reversed(self.letter_list)
+
+        return list(reverted_list)
+        
+
+    def sort_it(self:object) -> None:
+        """this method sort the list hold by the object and return it"""
+
+        sorted_list = sorted(self.letter_list)
+
+        return list(sorted_list)
+
+    
+    def create_new_list(self:object) -> None:
+        """this method create a new list ussing the length of the one already created, fill it with numbers and return it """
+
+        new_list = [random.randint(0, 100) for num in range (len(self.letter_list))]
+
+        return  new_list
+        
+
+       
+
+
+list1 = MyList(["E", "I", "L", "E"])
+print(list1.letter_list)
+print(list1.reverse_it())
+print(list1.sort_it())
+list2 = list1.create_new_list()
+print(list2)
