@@ -15,6 +15,8 @@ import random
 #           -“dog_name shakes your hand”.
 #           -“dog_name plays dead”.
 
+print("----- EX3 -----")
+
 class PetDog(Dog):
     """
     a class that inherit from the dog class and add new possibilities
@@ -25,18 +27,49 @@ class PetDog(Dog):
         self.trained = trained
 
     def train(self:object) -> None:
+        """
+        a method that change the var from false to true and print the output of the bar() Dog method.
+        """
+
         self.bark()
         self.trained = True
     
     def play(self:object, *dogs:object) -> None:
-        print(f"{dogs} all play together")
+        """
+        unpack the *args and use there name to create a string then use the string to print a nice message 
+        """
+
+        friends = " "
+        for dog in dogs:
+            friends += dog.name + " and "
+
+        print(f"{self.name} {friends} all plays together")
     
     def do_a_trick(self:object) -> None:
-        trick_list = [f"{self.name} does a barrel roll", f"{self.name} stand on his back leg", f"{self.name} shake your hand", f"{self.name} play dead"]
-        trick = random.randchoice(trick_list)
+        """
+        randomly choose a trick from the tricklist and print the action if the dog is trained
+        """
+
+        trick_list = [
+            f"{self.name} does a barrel roll",
+         f"{self.name} stand on his back leg",
+          f"{self.name} shake your hand",
+           f"{self.name} play dead"
+           ]
+        trick = random.choice(trick_list)
 
         if self.trained == True:
             print(trick)
+        
+        else:
+            print(f"{self.name} ignore you completly ... maybe you should train him first !!")
 
 columbus = PetDog("Columbus", 8, 10)
+amerigo = PetDog("Amerigo", 6, 16)
+erikson = PetDog("Erikson", 8, 4)
 columbus.train()
+columbus.play(amerigo, erikson)
+columbus.do_a_trick()
+amerigo.do_a_trick()
+amerigo.train()
+amerigo.do_a_trick()
