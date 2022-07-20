@@ -1,0 +1,22 @@
+{
+  "age": 35,
+  "children": [
+    {
+      "age": 6,
+      "favorite_color": "green",
+      "firstName": "Alice"
+    },
+    {
+      "age": 8,
+      "favorite_color": "green",
+      "firstName": "Bob"
+    }
+  ],
+  "firstName": "Jane",
+  "hobbies": [
+    "running",
+    "sky diving",
+    "singing"
+  ],
+  "lastName": "Doe"
+}
