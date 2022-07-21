@@ -3,12 +3,10 @@ class AnagramChecker():
     class that hold all the function to check anagrams
     """
 
-    def __init__(self:object) -> None:
+    with open("./properEngWords.txt", mode = 'r' ) as f:
+        data = f.readlines()
 
-        with open("./properEngWords.txt", mode = 'r' ) as f:
-            self.data = f.readlines()
-
-        self.data = [str.rstrip('\n') for str in self.data]
+    data = [str.rstrip('\n') for str in data]
 
     
     @classmethod
@@ -28,25 +26,16 @@ class AnagramChecker():
         
         return False
 
-
-    def is_valid_word(self:object) -> str: # validate will be replace by the function in the other file and will just check if in list 
+    @classmethod
+    def is_valid_word(cls:object, user_word:str) -> str: 
         """
         get input from user and check validate return the word if clean  
         """
-
-        user_word = input("Chose a word please: ")
-        user_word = user_word.upper()
-
-        try:
-            int(user_word)
-            print("Error invalid word, try again")
-        except:
-            if user_word in self.data:
-                return user_word
-            else:
-                print("Error not a proper world")
+        
+        if user_word in cls.data:
+            return user_word   
     
-
+    
     def get_anagrams(self:object, user_word:str) -> list:
         """
         compare the word in param with the data list
