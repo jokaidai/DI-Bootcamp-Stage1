@@ -33,7 +33,7 @@ def get_words_from_file() -> list:
    return data
 
 
-def get_random_sentence(len:int) -> list:
+def get_random_sentence(len:int) -> None:
    """
    get random words from a list and create a sentence, the length is define by the parameter 
    """
@@ -44,6 +44,27 @@ def get_random_sentence(len:int) -> list:
    lower_list = [word.lower() for word in words_list]
    rand_str = " ".join(lower_list)
 
-   return rand_str
+   print(rand_str)
 
-print(get_random_sentence(18))
+def main() -> None:
+   """
+   main method handle the other funct, get the info from the user and check them .
+   """
+
+   
+   while True:
+      user_imput = input("How many words do you want in your sentence ?")
+
+      try:
+         user_imput = int(user_imput)
+         if 2 <= user_imput <= 20:
+            break
+         else:
+            print("Choose a number between 2 ~ 20 ...")
+
+      except:
+        print("Please enter a real number !!!")
+   
+   get_random_sentence(user_imput)
+
+main()
