@@ -40,3 +40,9 @@
 -- select first_name, last_name from students where student_id = 1 or student_id = 3
 
 -- select * from students where birth_date >= '2000-01-01'
+
+-- select * from students where student_id <= 4 order by last_name ASC
+
+-- select * from students where birth_date = (select max(birth_date) from students)
+
+-- select * from students offset 2 limit 3
