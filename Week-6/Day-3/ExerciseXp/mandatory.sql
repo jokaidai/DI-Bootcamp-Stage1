@@ -65,3 +65,16 @@
 
 -- select * from customer_review;
 
+-- update film set language_id = (select language_id from language where name = 'Japanese') where title ilike '%japan%';
+
+-- select film_id, title, language_id from film where  title ilike '%japan%'; 
+
+-- select * from film;
+
+-- answer: the customer table have a conection to the adresse table meaning that when we insert into the customer we have to subquery the id from adress 
+
+-- drop table customer_review;
+
+-- select count(*) as num_of_unreturn_movies from rental where return_date is null;
+
+select  as num_of_unreturn_movies from rental where return_date is null;
