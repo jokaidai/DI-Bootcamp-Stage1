@@ -77,4 +77,7 @@
 
 -- select count(*) as num_of_unreturn_movies from rental where return_date is null;
 
-select  as num_of_unreturn_movies from rental where return_date is null;
+select  title, rental_rate 
+from film 
+inner join inventory
+on inventory.film_id = film.film_id
