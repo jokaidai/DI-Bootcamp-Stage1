@@ -22,7 +22,6 @@ class MenuItem():
         self.item_id = MenuItem.INDEX 
         
 
-
     @classmethod
     def exe_query(cls:object, query:str) -> None:
         """
@@ -98,13 +97,3 @@ class MenuItem():
         query = f"delete from {TABLE} where item_id = {self.item_id};"
         self.exe_query(query)
         MenuItem.item_list.remove(self)
-    
- 
-
-            
-
-item = MenuItem('Burger', 35)
-item.save()
-item.update('Veggie Burger', 37)
-print(MenuItem.all())
-print(MenuItem.get_by_name('Veggie Burger'))

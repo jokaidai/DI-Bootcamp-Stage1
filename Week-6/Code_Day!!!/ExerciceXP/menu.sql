@@ -6,6 +6,6 @@
 
 -- update menu set item_name = 'Burger', item_price = 35 where item_name = 'Pizza';  
 
--- truncate menu restart identity;
+truncate menu restart identity;
 
 -- select * from menu;
